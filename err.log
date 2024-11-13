@@ -1,0 +1,21 @@
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [server1]
+
+TASK [Add docker group to current user] ****************************************
+ok: [server1]
+
+TASK [Add user to the group] ***************************************************
+ok: [server1]
+
+TASK [Copy Dockerfile] *********************************************************
+ok: [server1]
+
+TASK [Build Docker Image] ******************************************************
+fatal: [server1]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (Docker SDK for Python: docker (Python >= 2.7) or docker-py (Python 2.6)) on server1's Python /usr/bin/python. Please read module documentation and install in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter, for example via `pip install docker` or `pip install docker-py` (Python 2.6). The error was: No module named requests.exceptions"}
+
+PLAY RECAP *********************************************************************
+server1                    : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
