@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN sudo apt-get update && \
+RUN apt-get update && \
     apt-get install -y apache2 mariadb-server && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
